@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>癒しのスパ Sakura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif JP', serif;
+      background-color: #fffefc;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: url('images/header.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    header h1, header p {
+      z-index: 2;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.5rem;
+    }
+
+    nav.sticky-nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff8f0;
+      z-index: 10;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    nav.sticky-nav a {
+      margin: 0 10px;
+      color: #c29175;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.sticky-nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #c29175;
+    }
+
+    .menu li {
+      margin-bottom: 12px;
+      list-style: none;
+    }
+
+    .cta {
+      background-color: #f6ede8;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cta a {
+      background-color: #c29175;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #a37158;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .access {
+      background-color: #fcf6f2;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .access p {
+      margin: 8px 0;
+    }
+
+    .embed-container {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .embed-container iframe {
+      width: 100%;
+      border: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>癒しのスパ Sakura</h1>
+    <p>極上のリラクゼーション体験を、あなたに。</p>
+  </header>
+
+  <nav class="sticky-nav">
+    <a href="#concept">こだわり</a>
+    <a href="#menu">メニュー</a>
+    <a href="#reserve">予約</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#access">アクセス</a>
+  </nav>
+
+  <section id="concept" class="fade-in">
+    <h2>当店のこだわり</h2>
+    <p>
+      和と自然の融合をテーマに、完全個室で心からリラックスできる空間をご提供します。<br>
+      使用するアロマやオイルは全てオーガニック。<br>
+      経験豊富なセラピストが、心と身体を優しく癒します。
+    </p>
+  </section>
+
+  <section id="menu" class="fade-in">
+    <h2>メニュー</h2>
+    <ul class="menu">
+      <li>🌸 アロマオイルトリートメント（60分） - ¥8,000</li>
+      <li>🌿 全身ボディケア（90分） - ¥10,000</li>
+      <li>💆 フェイシャル＆ヘッドスパ（70分） - ¥9,000</li>
+      <li>✨ プレミアムコース（120分） - ¥15,000</li>
+    </ul>
+  </section>
+
+  <section id="reserve" class="cta fade-in">
+    <h2>今すぐご予約を</h2>
+    <a href="https://lin.ee/xxxxxxx" target="_blank">LINEで予約する</a>
+  </section>
+
+  <section id="instagram" class="embed-container fade-in">
+    <h2>Instagram</h2>
+    <iframe src="https://www.instagram.com/p/XXXXXXXXX/embed" height="480"></iframe>
+  </section>
+
+  <section class="embed-container fade-in">
+    <h2>Google Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.817920128228!2d139.71038811525926!3d35.65803418019996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b44f06d622b%3A0x73d0f31b1e16846e!2z5pel5pys44CB44CSMTA1LTAwNjEg5p2x5Lqs6YO95riL6LC35Yy65Luj55Sw5Yy66YCa5L-h5omL77yR5LiB55uu77yR77yQIOODieODrOODs-ODvOOCr-ODvOODq-ODvOOCuA!5e0!3m2!1sja!2sjp!4v1647585109443!5m2!1sja!2sjp" height="450" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <section id="access" class="access fade-in">
+    <h2>アクセス・店舗情報</h2>
+    <p>〒123-4567 東京都渋谷区恵比寿1-2-3</p>
+    <p>JR恵比寿駅 徒歩5分</p>
+    <p>営業時間：10:00〜20:00（最終受付 18:30）</p>
+    <p>定休日：水曜日</p>
+    <p>📞 03-1234-5678</p>
+  </section>
+
+  <footer>
+    © 2025 癒しのスパ Sakura. All Rights Reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
