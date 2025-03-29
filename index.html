@@ -1,240 +1,524 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>癒しのスパ Sakura</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- =======================
+       SEO用メタタグ
+       ======================= -->
+  <title>カフェ HIBIKI | 恵比寿の隠れ家</title>
+  <meta name="description" content="カフェHIBIKIは、恵比寿の静かな路地裏にある隠れ家カフェ。自家焙煎コーヒーや無添加スイーツでゆったりとした時間をお過ごしください。">
+  <meta name="keywords" content="カフェ,恵比寿,コーヒー,スイーツ,オーガニック,隠れ家,ブランチ,スライドショー,メニュー">
+  <meta name="author" content="カフェ HIBIKI">
+
+  <!-- Open Graph / SNSシェア用 -->
+  <meta property="og:title" content="カフェ HIBIKI | 恵比寿の隠れ家" />
+  <meta property="og:description" content="自家焙煎コーヒーと無添加スイーツが人気のカフェHIBIKI。隠れ家的な空間でゆったりとした時間をどうぞ。" />
+  <meta property="og:image" content="images/og-image.jpg" /><!-- 実際のOG画像パスに変更 -->
+  <meta property="og:url" content="https://example.com/" /><!-- 実際のURLに変更 -->
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="カフェ HIBIKI | 恵比寿の隠れ家" />
+  <meta name="twitter:description" content="自家焙煎コーヒーと無添加スイーツが人気のカフェHIBIKI。隠れ家的な空間でゆったりとした時間をどうぞ。" />
+  <meta name="twitter:image" content="images/og-image.jpg" /><!-- 実際のOG画像パスに変更 -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-PYRPbZcP0YqgQ0m5LGhtOZ7ZtBt6lWdBPOWTZgyHpPvFzvHzK9XxHCTI/tzJxvUsAgv51Y+PibgUu1Mu9k93Lg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Serif JP', serif;
-      background-color: #fffefc;
-      color: #333;
-      line-height: 1.8;
+    /*----------------------------------------
+      カラー・フォント設定
+      → ダークトーンで落ち着いた雰囲気
+    ----------------------------------------*/
+    :root {
+      --bg-main: #1c1c1c;         /* 全体の背景をダークグレー寄りに */
+      --text-main: #f5f5f5;       /* メイン文字色は明るめのグレー */
+      --primary: #a48f7a;         /* 静かなゴールド系 */
+      --accent: #b8a181;          /* primary よりやや明るめのアクセント */
+      --font-main: "Noto Serif JP", serif;
+      --font-heading: "Playfair Display", serif;
+      scroll-behavior: smooth;
     }
 
+    /* ベース */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /*----------------------------------------
+      ヘッダー＆ナビゲーション
+    ----------------------------------------*/
     header {
-      background: url('images/header.png') no-repeat center center/cover;
-      height: 100vh;
+      width: 100%;
+      background-color: #2a2a2a;
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .nav-left h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+    .nav-right a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .nav-right a:hover {
+      color: var(--accent);
+    }
+
+    /*----------------------------------------
+      ヒーローセクション
+    ----------------------------------------*/
+    .hero {
+      width: 100%;
+      height: 70vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('images/header.jpg') center center/cover no-repeat;
+      display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: white;
-      padding: 0 20px;
-      position: relative;
+    }
+    .hero h2 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
     }
 
-    header::after {
-      content: '';
+    /*----------------------------------------
+      セクション（共通）
+    ----------------------------------------*/
+    section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    section h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--accent);
+    }
+    section p {
+      color: var(--text-main);
+    }
+
+    /*----------------------------------------
+      カフェの魅力セクション
+    ----------------------------------------*/
+    .charm-container {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .charm-container p {
+      font-size: 1rem;
+      margin: 0 auto 40px;
+      max-width: 800px;
+      line-height: 1.7;
+    }
+
+    .charm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+    }
+    .charm-item {
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .charm-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+    .charm-item img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 16px;
+      display: block;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .charm-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .charm-item p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /*----------------------------------------
+      メニューセクション
+      - スライドショー (おすすめ)
+      - トグル (通常メニュー)
+    ----------------------------------------*/
+    /* スライドショー全体のコンテナ */
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 340px;  /* 背景イメージが全体を覆う */
+      overflow: hidden;
+      margin: 0 auto 40px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .slide {
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 100%;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.4);
-      z-index: 1;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: left 0.6s ease;
+      border-radius: 8px;
+      /* テキスト重なり用には、.slide-content で対処 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slide.active {
+      left: 0;
     }
 
-    header h1, header p {
-      z-index: 2;
-      position: relative;
+    /* ---- テキストをまとめたコンテナ ---- */
+    .slide-content {
+      background-color: rgba(0, 0, 0, 0.5); /* 文字が読めるよう半透明背景 */
+      padding: 20px 30px;
+      border-radius: 6px;
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    .slide-content h4 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 8px;
+      font-family: var(--font-heading);
+    }
+    .slide-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #fff;
+      opacity: 0.95;
     }
 
-    header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.5rem;
-    }
-
-    nav.sticky-nav {
-      position: sticky;
-      top: 0;
-      background-color: #fff8f0;
-      z-index: 10;
+    /* トグルボタン */
+    .toggle-button {
+      display: inline-block;
+      margin: 0 auto 20px;
       padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      text-align: center;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .toggle-button:hover {
+      background-color: var(--primary);
     }
 
-    nav.sticky-nav a {
-      margin: 0 10px;
-      color: #c29175;
-      text-decoration: none;
-      font-weight: bold;
+    /* 通常メニューのリスト */
+    .normal-menu-list {
+      display: none; /* 初期状態では非表示 */
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      padding: 20px;
     }
-
-    nav.sticky-nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #c29175;
-    }
-
-    .menu li {
-      margin-bottom: 12px;
+    .normal-menu-list li {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 12px 0;
       list-style: none;
+      color: var(--text-main);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 半透明の仕切り線 */
+    }
+    /* 最後のリスト項目は仕切り線を非表示に */
+    .normal-menu-list li:last-of-type {
+      border-bottom: none;
     }
 
-    .cta {
-      background-color: #f6ede8;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .cta a {
-      background-color: #c29175;
-      color: white;
-      padding: 15px 35px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: 0.3s ease;
-    }
-
-    .cta a:hover {
-      background-color: #a37158;
-    }
-
+    /*----------------------------------------
+      フッター
+    ----------------------------------------*/
     footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #999;
-    }
-
-    .access {
-      background-color: #fcf6f2;
+      background-color: #161616;
+      color: #777;
       padding: 40px 20px;
       text-align: center;
+      margin-top: 80px;
+    }
+    .footer-text {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
 
-    .access p {
-      margin: 8px 0;
-    }
-
-    .embed-container {
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 0 20px;
-    }
-
-    .embed-container iframe {
-      width: 100%;
-      border: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      header h1 {
+    /*----------------------------------------
+      レスポンシブ
+    ----------------------------------------*/
+    @media (max-width: 768px) {
+      .hero h2 {
         font-size: 2.2rem;
       }
-
-      header p {
-        font-size: 1.1rem;
+      .charm-grid {
+        grid-template-columns: 1fr;
       }
-
-      h2 {
-        font-size: 1.5rem;
+      .slideshow-container {
+        height: 320px;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
+  <!-- =======================
+       ヘッダー＆ナビゲーション
+       ======================= -->
   <header>
-    <h1>癒しのスパ Sakura</h1>
-    <p>極上のリラクゼーション体験を、あなたに。</p>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h1>Cafe HIBIKI</h1>
+      </div>
+      <div class="nav-right">
+        <a href="#charm">Charm</a>
+        <a href="#menu">Menu</a>
+      </div>
+    </div>
   </header>
 
-  <nav class="sticky-nav">
-    <a href="#concept">こだわり</a>
-    <a href="#menu">メニュー</a>
-    <a href="#reserve">予約</a>
-    <a href="#instagram">Instagram</a>
-    <a href="#access">アクセス</a>
-  </nav>
-
-  <section id="concept" class="fade-in">
-    <h2>当店のこだわり</h2>
-    <p>
-      和と自然の融合をテーマに、完全個室で心からリラックスできる空間をご提供します。<br>
-      使用するアロマやオイルは全てオーガニック。<br>
-      経験豊富なセラピストが、心と身体を優しく癒します。
-    </p>
+  <!-- =======================
+       ヒーローセクション
+       ======================= -->
+  <section class="hero">
+    <div>
+      <h2>カフェHIBIKI</h2>
+      <p>静かな路地裏で見つける、心と身体に響くひととき。</p>
+    </div>
   </section>
 
-  <section id="menu" class="fade-in">
-    <h2>メニュー</h2>
-    <ul class="menu">
-      <li>🌸 アロマオイルトリートメント（60分） - ¥8,000</li>
-      <li>🌿 全身ボディケア（90分） - ¥10,000</li>
-      <li>💆 フェイシャル＆ヘッドスパ（70分） - ¥9,000</li>
-      <li>✨ プレミアムコース（120分） - ¥15,000</li>
+  <!-- =======================
+       カフェの魅力セクション
+       ======================= -->
+  <section id="charm">
+    <h3>カフェの魅力</h3>
+    <div class="charm-container">
+      <p>
+        カフェHIBIKIは、恵比寿の静かな路地裏に佇む隠れ家カフェです。<br>
+        自家焙煎コーヒーはもちろん、無添加スイーツや季節のブランチメニューを厳選素材でご用意。<br>
+        あなたの時間をゆったり満たすための空間づくりにこだわっています。
+      </p>
+      <div class="charm-grid">
+        <!-- 魅力のポイント（イメージ＋テキスト） -->
+        <div class="charm-item">
+          <img src="images/charm1.jpg" alt="こだわりの豆" />
+          <h4>自家焙煎コーヒー</h4>
+          <p>
+            豆の産地や焙煎度合いにこだわり、一杯ずつ丁寧にハンドドリップ。<br>
+            豊かな香りと深い味わいをお楽しみください。
+          </p>
+        </div>
+        <div class="charm-item">
+          <img src="images/charm2.jpg" alt="無添加スイーツ" />
+          <h4>無添加スイーツ</h4>
+          <p>
+            添加物を極力使わず、素材の甘みを生かしたスイーツを提供。<br>
+            カラダにもやさしく、見た目も可愛い一品です。
+          </p>
+        </div>
+        <div class="charm-item">
+          <img src="images/charm3.jpg" alt="落ち着いた内装" />
+          <h4>落ち着いた内装</h4>
+          <p>
+            木を基調としたインテリアと心地よい照明。<br>
+            静かなBGMが流れる店内で、ゆったりとした時間をお過ごしください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================
+       メニューセクション
+       ======================= -->
+  <section id="menu">
+    <h3>Menu</h3>
+    <p style="text-align:center; margin-bottom:40px; opacity:0.9;">
+      おすすめのメニューをスライドショーでご紹介。<br>
+      通常メニューは「表示ボタン」をクリックすると展開されます。
+    </p>
+
+    <!-- ==== スライドショー（おすすめメニュー、背景画像で表示） ==== -->
+    <div class="slideshow-container" id="recommendationSlider">
+
+      <!-- Slide 1 -->
+      <div 
+        class="slide active"
+        style="background-image: url('images/recommend1.jpg');"
+      >
+        <!-- テキストオーバーレイ -->
+        <div class="slide-content">
+          <h4>特製フレンチトースト</h4>
+          <p>
+            じっくり卵液に浸したふわふわ食感。<br>
+            甘さ控えめの自家製ソースが相性抜群。
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div 
+        class="slide"
+        style="background-image: url('images/recommend2.jpg');"
+      >
+        <div class="slide-content">
+          <h4>オーガニック抹茶ラテ</h4>
+          <p>
+            厳選抹茶を贅沢に使用。<br>
+            香り高い抹茶の風味が人気の一杯。
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div 
+        class="slide"
+        style="background-image: url('images/recommend3.jpg');"
+      >
+        <div class="slide-content">
+          <h4>季節のサンドイッチ</h4>
+          <p>
+            旬の食材をたっぷり挟んだ大満足のサンドイッチ。<br>
+            彩り豊かでヘルシーです。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== トグルボタン & 通常メニューリスト ==== -->
+    <div style="text-align:center;">
+      <button class="toggle-button" id="toggleMenuButton">通常メニューを表示</button>
+    </div>
+    <ul class="normal-menu-list" id="normalMenuList">
+      <li>ハンドドリップコーヒー - ¥600</li>
+      <li>オリジナルハーブティー - ¥550</li>
+      <li>グルテンフリーケーキ - ¥700</li>
+      <li>ヒビキ スペシャルパフェ - ¥900</li>
+      <li>マフィン各種 - ¥350～</li>
+      <li>スムージーボウル - ¥800</li>
     </ul>
   </section>
 
-  <section id="reserve" class="cta fade-in">
-    <h2>今すぐご予約を</h2>
-    <a href="https://lin.ee/xxxxxxx" target="_blank">LINEで予約する</a>
-  </section>
-
-  <section id="instagram" class="embed-container fade-in">
-    <h2>Instagram</h2>
-    <iframe src="https://www.instagram.com/p/XXXXXXXXX/embed" height="480"></iframe>
-  </section>
-
-  <section class="embed-container fade-in">
-    <h2>Google Map</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.817920128228!2d139.71038811525926!3d35.65803418019996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b44f06d622b%3A0x73d0f31b1e16846e!2z5pel5pys44CB44CSMTA1LTAwNjEg5p2x5Lqs6YO95riL6LC35Yy65Luj55Sw5Yy66YCa5L-h5omL77yR5LiB55uu77yR77yQIOODieODrOODs-ODvOOCr-ODvOODq-ODvOOCuA!5e0!3m2!1sja!2sjp!4v1647585109443!5m2!1sja!2sjp" height="450" allowfullscreen loading="lazy"></iframe>
-  </section>
-
-  <section id="access" class="access fade-in">
-    <h2>アクセス・店舗情報</h2>
-    <p>〒123-4567 東京都渋谷区恵比寿1-2-3</p>
-    <p>JR恵比寿駅 徒歩5分</p>
-    <p>営業時間：10:00〜20:00（最終受付 18:30）</p>
-    <p>定休日：水曜日</p>
-    <p>📞 03-1234-5678</p>
-  </section>
-
+  <!-- =======================
+       フッター
+       ======================= -->
   <footer>
-    © 2025 癒しのスパ Sakura. All Rights Reserved.
+    <div class="footer-text">
+      © 2025 カフェ HIBIKI. All Rights Reserved.
+    </div>
   </footer>
 
+  <!-- =======================
+       スライドショー & トグル用スクリプト
+       ======================= -->
   <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    // ---- スライドショー ----
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-    sections.forEach(section => observer.observe(section));
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // 5秒ごとにスライド切り替え
+    setInterval(nextSlide, 5000);
+
+    // ---- トグルボタンで通常メニュー表示/非表示 ----
+    const toggleMenuButton = document.getElementById('toggleMenuButton');
+    const normalMenuList = document.getElementById('normalMenuList');
+
+    toggleMenuButton.addEventListener('click', () => {
+      if (normalMenuList.style.display === '' || normalMenuList.style.display === 'none') {
+        normalMenuList.style.display = 'block';
+        toggleMenuButton.textContent = '通常メニューを隠す';
+      } else {
+        normalMenuList.style.display = 'none';
+        toggleMenuButton.textContent = '通常メニューを表示';
+      }
+    });
   </script>
 </body>
 </html>
