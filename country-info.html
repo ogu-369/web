@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>各国の基本情報比較 - 人気ワーキングホリデー5カ国比較</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .country-au { color: #3498db; }
+        .country-ca { color: #e74c3c; }
+        .country-nz { color: #2ecc71; }
+        .country-uk { color: #9b59b6; }
+        .country-de { color: #f1c40f; }
+        .bg-au { background-color: #3498db; }
+        .bg-ca { background-color: #e74c3c; }
+        .bg-nz { background-color: #2ecc71; }
+        .bg-uk { background-color: #9b59b6; }
+        .bg-de { background-color: #f1c40f; }
+        .flag-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+        .header-au { background-color: rgba(52, 152, 219, 0.2); }
+        .header-ca { background-color: rgba(231, 76, 60, 0.2); }
+        .header-nz { background-color: rgba(46, 204, 113, 0.2); }
+        .header-uk { background-color: rgba(155, 89, 182, 0.2); }
+        .header-de { background-color: rgba(241, 196, 15, 0.2); }
+        .cell-au { background-color: rgba(52, 152, 219, 0.1); }
+        .cell-ca { background-color: rgba(231, 76, 60, 0.1); }
+        .cell-nz { background-color: rgba(46, 204, 113, 0.1); }
+        .cell-uk { background-color: rgba(155, 89, 182, 0.1); }
+        .cell-de { background-color: rgba(241, 196, 15, 0.1); }
+        .table-header {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        .table-cell {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gray-100">
+<div class="slide-container bg-white shadow-xl flex flex-col">
+<!-- Top color bar representing the 5 countries -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+<!-- Main content -->
+<div class="flex-1 flex flex-col p-10">
+<h1 class="text-3xl font-bold mb-8 text-center text-gray-800 opacity-0 fade-in">
+                各国の基本情報比較
+            </h1>
+<div class="w-full opacity-0 fade-in delay-1">
+<table class="w-full border-collapse">
+<thead>
+<tr>
+<th class="table-header text-left w-1/6"></th>
+<th class="table-header header-au w-1/6">
+<i class="fas fa-globe-oceania mr-1 country-au"></i>
+<span class="country-au">オーストラリア</span>
+</th>
+<th class="table-header header-ca w-1/6">
+<i class="fas fa-leaf mr-1 country-ca"></i>
+<span class="country-ca">カナダ</span>
+</th>
+<th class="table-header header-nz w-1/6">
+<i class="fas fa-mountain mr-1 country-nz"></i>
+<span class="country-nz">ニュージーランド</span>
+</th>
+<th class="table-header header-uk w-1/6">
+<i class="fas fa-crown mr-1 country-uk"></i>
+<span class="country-uk">イギリス</span>
+</th>
+<th class="table-header header-de w-1/6">
+<i class="fas fa-beer mr-1 country-de"></i>
+<span class="country-de">ドイツ</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<!-- Age Requirements -->
+<tr class="opacity-0 fade-in delay-2">
+<td class="table-cell text-left font-semibold bg-gray-100">年齢条件</td>
+<td class="table-cell cell-au">18～30歳</td>
+<td class="table-cell cell-ca">18～30歳</td>
+<td class="table-cell cell-nz">18～30歳</td>
+<td class="table-cell cell-uk">18～30歳</td>
+<td class="table-cell cell-de">18～30歳</td>
+</tr>
+<!-- Maximum Stay Period -->
+<tr class="opacity-0 fade-in delay-3">
+<td class="table-cell text-left font-semibold bg-gray-100">滞在可能期間</td>
+<td class="table-cell cell-au">最長12ヶ月<br/><span class="text-sm">(条件付きで最大+24ヶ月)</span></td>
+<td class="table-cell cell-ca">最長12ヶ月</td>
+<td class="table-cell cell-nz">最長12ヶ月<br/><span class="text-sm">(条件付きで+3ヶ月)</span></td>
+<td class="table-cell cell-uk">最長24ヶ月</td>
+<td class="table-cell cell-de">最長12ヶ月</td>
+</tr>
+<!-- Annual Visa Quota -->
+<tr class="opacity-0 fade-in delay-4">
+<td class="table-cell text-left font-semibold bg-gray-100">年間発給数</td>
+<td class="table-cell cell-au">制限なし</td>
+<td class="table-cell cell-ca">6,500人/年</td>
+<td class="table-cell cell-nz">制限なし</td>
+<td class="table-cell cell-uk">6,000人/年</td>
+<td class="table-cell cell-de">制限なし</td>
+</tr>
+<!-- Required Funds -->
+<tr class="opacity-0 fade-in delay-5">
+<td class="table-cell text-left font-semibold bg-gray-100">必要資金</td>
+<td class="table-cell cell-au">5,000AUD以上<br/><span class="text-sm">(約45万円)</span></td>
+<td class="table-cell cell-ca">2,500CAD以上<br/><span class="text-sm">(約25万円)</span></td>
+<td class="table-cell cell-nz">4,200NZD以上<br/><span class="text-sm">(約35万円)</span></td>
+<td class="table-cell cell-uk">2,530£以上<br/><span class="text-sm">(約50万円)</span></td>
+<td class="table-cell cell-de">2,000€以上<br/><span class="text-sm">(約32万円)</span></td>
+</tr>
+<!-- Application Method -->
+<tr class="opacity-0 fade-in delay-6">
+<td class="table-cell text-left font-semibold bg-gray-100">申請方法</td>
+<td class="table-cell cell-au">オンライン<br/><span class="text-sm">(ImmiAccount)</span></td>
+<td class="table-cell cell-ca">オンライン<br/><span class="text-sm">(抽選・招待制)</span></td>
+<td class="table-cell cell-nz">オンライン<br/><span class="text-sm">(通年受付)</span></td>
+<td class="table-cell cell-uk">オンライン<br/><span class="text-sm">(生体認証登録要)</span></td>
+<td class="table-cell cell-de">オンライン予約→来館申請<br/><span class="text-sm">(大使館/総領事館)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-6 opacity-0 fade-in delay-6">
+<h3 class="text-xl font-bold mb-2 text-gray-700">ポイント</h3>
+<ul class="list-disc pl-6 text-gray-600 space-y-1">
+<li>イギリスは最長滞在期間が<span class="font-bold text-purple-600">24ヶ月</span>と長い</li>
+<li>オーストラリアは条件付きで<span class="font-bold text-blue-600">最大3年間</span>まで滞在可能</li>
+<li>カナダ・イギリスは<span class="font-bold">年間発給枠の制限</span>があるため競争率が高い</li>
+<li>ニュージーランドは<span class="font-bold text-green-600">申請料が無料</span>で経済的</li>
+<li>必要資金はイギリスとオーストラリアが比較的高め</li>
+</ul>
+</div>
+</div>
+<!-- Bottom color bar -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+</div>
+<div class="flex justify-between mt-10 text-center text-blue-600 font-semibold">
+<a href="index.html">🏠 ホーム</a>
+<a href="index.html">◀ 前へ</a>
+<a href="visa-details.html">▶ 次へ</a>
+</div>
+</body>
+</html>

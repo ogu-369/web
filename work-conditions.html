@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>就労条件の比較 - 人気ワーキングホリデー5カ国比較</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .country-au { color: #3498db; }
+        .country-ca { color: #e74c3c; }
+        .country-nz { color: #2ecc71; }
+        .country-uk { color: #9b59b6; }
+        .country-de { color: #f1c40f; }
+        .bg-au { background-color: #3498db; }
+        .bg-ca { background-color: #e74c3c; }
+        .bg-nz { background-color: #2ecc71; }
+        .bg-uk { background-color: #9b59b6; }
+        .bg-de { background-color: #f1c40f; }
+        .bg-au-light { background-color: rgba(52, 152, 219, 0.1); }
+        .bg-ca-light { background-color: rgba(231, 76, 60, 0.1); }
+        .bg-nz-light { background-color: rgba(46, 204, 113, 0.1); }
+        .bg-uk-light { background-color: rgba(155, 89, 182, 0.1); }
+        .bg-de-light { background-color: rgba(241, 196, 15, 0.1); }
+        .flag-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+        .header-au { background-color: rgba(52, 152, 219, 0.2); }
+        .header-ca { background-color: rgba(231, 76, 60, 0.2); }
+        .header-nz { background-color: rgba(46, 204, 113, 0.2); }
+        .header-uk { background-color: rgba(155, 89, 182, 0.2); }
+        .header-de { background-color: rgba(241, 196, 15, 0.2); }
+        .table-header {
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+        }
+        .table-cell {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gray-100">
+<div class="slide-container bg-white shadow-xl flex flex-col">
+<!-- Top color bar representing the 5 countries -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+<!-- Main content -->
+<div class="flex-1 flex flex-col p-10">
+<h1 class="text-3xl font-bold mb-6 text-center text-gray-800 opacity-0 fade-in">
+                就労条件の比較
+            </h1>
+<!-- Minimum wage comparison -->
+<div class="mb-6 opacity-0 fade-in delay-1">
+<h2 class="text-xl font-bold mb-3 text-gray-700">最低賃金比較（2024-2025年時点）</h2>
+<div class="flex justify-around items-center py-3">
+<div class="text-center">
+<div class="h-20 w-20 rounded-full flex items-center justify-center header-au mx-auto mb-2">
+<span class="text-2xl font-bold country-au">$24.10</span>
+</div>
+<p class="country-au font-semibold">オーストラリア</p>
+<p class="text-sm">約2,200円/時</p>
+</div>
+<div class="text-center">
+<div class="h-20 w-20 rounded-full flex items-center justify-center header-ca mx-auto mb-2">
+<span class="text-2xl font-bold country-ca">$16.55</span>
+</div>
+<p class="country-ca font-semibold">カナダ</p>
+<p class="text-sm">州により異なる</p>
+</div>
+<div class="text-center">
+<div class="h-20 w-20 rounded-full flex items-center justify-center header-nz mx-auto mb-2">
+<span class="text-2xl font-bold country-nz">$23.50</span>
+</div>
+<p class="country-nz font-semibold">ニュージーランド</p>
+<p class="text-sm">約2,000円/時</p>
+</div>
+<div class="text-center">
+<div class="h-20 w-20 rounded-full flex items-center justify-center header-uk mx-auto mb-2">
+<span class="text-2xl font-bold country-uk">£11.44</span>
+</div>
+<p class="country-uk font-semibold">イギリス</p>
+<p class="text-sm">約2,300円/時</p>
+</div>
+<div class="text-center">
+<div class="h-20 w-20 rounded-full flex items-center justify-center header-de mx-auto mb-2">
+<span class="text-2xl font-bold country-de">€12.41</span>
+</div>
+<p class="country-de font-semibold">ドイツ</p>
+<p class="text-sm">約2,000円/時</p>
+</div>
+</div>
+</div>
+<!-- Job types table -->
+<div class="mb-6 opacity-0 fade-in delay-2">
+<h2 class="text-xl font-bold mb-3 text-gray-700">主な仕事の種類と特徴</h2>
+<table class="w-full border-collapse">
+<thead>
+<tr>
+<th class="table-header text-left w-1/6"></th>
+<th class="table-header w-2/5">都市部での主な仕事</th>
+<th class="table-header w-2/5">地方での主な仕事</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-au-light">
+<td class="table-cell font-semibold country-au">オーストラリア</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>カフェ・レストランスタッフ</li>
+<li>ホテル従業員</li>
+<li>日本食レストラン</li>
+</ul>
+</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>農場収穫作業（ファームジョブ）</li>
+<li>牧場作業</li>
+<li>リゾートスタッフ</li>
+</ul>
+</td>
+</tr>
+<tr class="bg-ca-light">
+<td class="table-cell font-semibold country-ca">カナダ</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>レストランサーバー</li>
+<li>小売店スタッフ</li>
+<li>オフィスアシスタント</li>
+</ul>
+</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>スキーリゾートスタッフ</li>
+<li>農場ワーカー</li>
+<li>ホテルスタッフ</li>
+</ul>
+</td>
+</tr>
+<tr class="bg-nz-light">
+<td class="table-cell font-semibold country-nz">ニュージーランド</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>カフェスタッフ</li>
+<li>ホステルレセプション</li>
+<li>日本語教師アシスタント</li>
+</ul>
+</td>
+<td class="table-cell">
+<ul class="list-disc pl-4">
+<li>フルーツ収穫（リンゴ・キウイ）</li>
+<li>酪農場ヘルパー</li>
+<li>ワイナリースタッフ</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Job search and tax information -->
+<div class="grid grid-cols-2 gap-6 opacity-0 fade-in delay-3">
+<div>
+<h2 class="text-xl font-bold mb-3 text-gray-700">主な求人情報サイト</h2>
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="inline-block country-au mr-2"><i class="fas fa-globe-oceania"></i></span>
+<div>
+<span class="font-semibold country-au">オーストラリア：</span>
+                                Seek、Indeed、Gumtree、Backpacker Job Board
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-ca mr-2"><i class="fas fa-leaf"></i></span>
+<div>
+<span class="font-semibold country-ca">カナダ：</span>
+                                Indeed、Job Bank、LinkedIn Jobs、Kijiji
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-nz mr-2"><i class="fas fa-mountain"></i></span>
+<div>
+<span class="font-semibold country-nz">ニュージーランド：</span>
+                                Trade Me Jobs、Seek、BackpackerBoard
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-uk mr-2"><i class="fas fa-crown"></i></span>
+<div>
+<span class="font-semibold country-uk">イギリス：</span>
+                                Indeed、Reed、Gumtree、Caterer.com
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-de mr-2"><i class="fas fa-beer"></i></span>
+<div>
+<span class="font-semibold country-de">ドイツ：</span>
+                                StepStone、Jobserve、Xing、LinkedIn
+                            </div>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="text-xl font-bold mb-3 text-gray-700">就労に必要な手続き</h2>
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="inline-block country-au mr-2"><i class="fas fa-globe-oceania"></i></span>
+<div>
+<span class="font-semibold country-au">オーストラリア：</span>
+                                Tax File Number (TFN) 取得が必要
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-ca mr-2"><i class="fas fa-leaf"></i></span>
+<div>
+<span class="font-semibold country-ca">カナダ：</span>
+                                Social Insurance Number (SIN) 取得が必須
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-nz mr-2"><i class="fas fa-mountain"></i></span>
+<div>
+<span class="font-semibold country-nz">ニュージーランド：</span>
+                                IRD番号（税務番号）取得が必須
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-uk mr-2"><i class="fas fa-crown"></i></span>
+<div>
+<span class="font-semibold country-uk">イギリス：</span>
+                                National Insurance (NI) 番号取得と登録
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-de mr-2"><i class="fas fa-beer"></i></span>
+<div>
+<span class="font-semibold country-de">ドイツ：</span>
+                                税番号（Steuer-ID）取得と住民登録
+                            </div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Additional tips -->
+<div class="mt-4 opacity-0 fade-in delay-4">
+<h3 class="text-lg font-bold mb-2 text-gray-700">仕事探しのポイント</h3>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+<li>オーストラリアは<span class="font-semibold">地方での農業就労</span>が滞在延長の条件になる</li>
+<li>カナダは<span class="font-semibold">冬季のリゾート求人</span>が多く、チップ文化あり</li>
+<li>ニュージーランドは<span class="font-semibold">農業・観光が主要産業</span>で、季節労働が多い</li>
+</ul>
+</div>
+<div>
+<ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+<li>イギリスでは<span class="font-semibold">都市部では競争が激しい</span>が、給与水準も高め</li>
+<li>ドイツでは<span class="font-semibold">専門スキル</span>があると有利だが、英語のみでも就労可能な場合も</li>
+<li>どの国も<span class="font-semibold">現地口座開設</span>が給与受取りに必要</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom color bar -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+</div>
+<div class="flex justify-between mt-10 text-center text-blue-600 font-semibold">
+<a href="index.html">🏠 ホーム</a>
+<a href="visa-details.html">◀ 前へ</a>
+<a href="life-cost.html">▶ 次へ</a>
+</div>
+</body>
+</html>

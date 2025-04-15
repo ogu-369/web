@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>生活環境と物価の比較 - 人気ワーキングホリデー5カ国比較</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .country-au { color: #3498db; }
+        .country-ca { color: #e74c3c; }
+        .country-nz { color: #2ecc71; }
+        .country-uk { color: #9b59b6; }
+        .country-de { color: #f1c40f; }
+        .bg-au { background-color: #3498db; }
+        .bg-ca { background-color: #e74c3c; }
+        .bg-nz { background-color: #2ecc71; }
+        .bg-uk { background-color: #9b59b6; }
+        .bg-de { background-color: #f1c40f; }
+        .bg-au-light { background-color: rgba(52, 152, 219, 0.1); }
+        .bg-ca-light { background-color: rgba(231, 76, 60, 0.1); }
+        .bg-nz-light { background-color: rgba(46, 204, 113, 0.1); }
+        .bg-uk-light { background-color: rgba(155, 89, 182, 0.1); }
+        .bg-de-light { background-color: rgba(241, 196, 15, 0.1); }
+        .flag-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+        .header-au { background-color: rgba(52, 152, 219, 0.2); }
+        .header-ca { background-color: rgba(231, 76, 60, 0.2); }
+        .header-nz { background-color: rgba(46, 204, 113, 0.2); }
+        .header-uk { background-color: rgba(155, 89, 182, 0.2); }
+        .header-de { background-color: rgba(241, 196, 15, 0.2); }
+        .table-header {
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+        }
+        .table-cell {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gray-100">
+<div class="slide-container bg-white shadow-xl flex flex-col">
+<!-- Top color bar representing the 5 countries -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+<!-- Main content -->
+<div class="flex-1 flex flex-col p-10">
+<h1 class="text-3xl font-bold mb-6 text-center text-gray-800 opacity-0 fade-in">
+                生活環境と物価の比較
+            </h1>
+<!-- Housing cost comparison -->
+<div class="mb-6 opacity-0 fade-in delay-1">
+<h2 class="text-xl font-bold mb-3 text-gray-700">主要都市の家賃相場（個室シェアハウスの場合）</h2>
+<div class="flex justify-around items-stretch">
+<!-- Australia -->
+<div class="w-1/5 bg-au-light rounded-lg p-3 shadow-sm">
+<h3 class="text-center font-bold country-au mb-2">オーストラリア</h3>
+<div class="text-center mb-2">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-city text-xl country-au"></i>
+</span>
+<p class="font-semibold">シドニー・メルボルン</p>
+<p>週300-400AUD</p>
+<p class="text-sm">(約27,000-36,000円)</p>
+</div>
+<div class="text-center">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-home text-xl country-au"></i>
+</span>
+<p class="font-semibold">郊外/地方</p>
+<p>週150-250AUD</p>
+<p class="text-sm text-gray-600">週払い制</p>
+</div>
+</div>
+<!-- Canada -->
+<div class="w-1/5 bg-ca-light rounded-lg p-3 shadow-sm">
+<h3 class="text-center font-bold country-ca mb-2">カナダ</h3>
+<div class="text-center mb-2">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-city text-xl country-ca"></i>
+</span>
+<p class="font-semibold">バンクーバー・トロント</p>
+<p>月800-1,200CAD</p>
+<p class="text-sm">(約80,000-120,000円)</p>
+</div>
+<div class="text-center">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-home text-xl country-ca"></i>
+</span>
+<p class="font-semibold">郊外/地方</p>
+<p>月500-700CAD</p>
+<p class="text-sm text-gray-600">月払い制</p>
+</div>
+</div>
+<!-- New Zealand -->
+<div class="w-1/5 bg-nz-light rounded-lg p-3 shadow-sm">
+<h3 class="text-center font-bold country-nz mb-2">ニュージーランド</h3>
+<div class="text-center mb-2">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-city text-xl country-nz"></i>
+</span>
+<p class="font-semibold">オークランド</p>
+<p>週200-250NZD</p>
+<p class="text-sm">(約17,000-21,000円)</p>
+</div>
+<div class="text-center">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-home text-xl country-nz"></i>
+</span>
+<p class="font-semibold">郊外/地方</p>
+<p>週100-150NZD</p>
+<p class="text-sm text-gray-600">週払い制</p>
+</div>
+</div>
+<!-- UK -->
+<div class="w-1/5 bg-uk-light rounded-lg p-3 shadow-sm">
+<h3 class="text-center font-bold country-uk mb-2">イギリス</h3>
+<div class="text-center mb-2">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-city text-xl country-uk"></i>
+</span>
+<p class="font-semibold">ロンドン</p>
+<p>月600-800£</p>
+<p class="text-sm">(約120,000-160,000円)</p>
+</div>
+<div class="text-center">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-home text-xl country-uk"></i>
+</span>
+<p class="font-semibold">郊外/地方</p>
+<p>月350-500£</p>
+<p class="text-sm text-gray-600">月払い制</p>
+</div>
+</div>
+<!-- Germany -->
+<div class="w-1/5 bg-de-light rounded-lg p-3 shadow-sm">
+<h3 class="text-center font-bold country-de mb-2">ドイツ</h3>
+<div class="text-center mb-2">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-city text-xl country-de"></i>
+</span>
+<p class="font-semibold">ベルリン・ミュンヘン</p>
+<p>月400-700€</p>
+<p class="text-sm">(約65,000-112,000円)</p>
+</div>
+<div class="text-center">
+<span class="inline-block bg-white rounded-full p-2 mb-1">
+<i class="fas fa-home text-xl country-de"></i>
+</span>
+<p class="font-semibold">郊外/地方</p>
+<p>月300-450€</p>
+<p class="text-sm text-gray-600">月払い制</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Food cost comparison -->
+<div class="mb-6 opacity-0 fade-in delay-2">
+<h2 class="text-xl font-bold mb-3 text-gray-700">食料品の物価比較（2024-2025年時点の平均）</h2>
+<table class="w-full border-collapse">
+<thead>
+<tr>
+<th class="table-header text-left w-1/6">品目</th>
+<th class="table-header header-au w-1/6">オーストラリア</th>
+<th class="table-header header-ca w-1/6">カナダ</th>
+<th class="table-header header-nz w-1/6">ニュージーランド</th>
+<th class="table-header header-uk w-1/6">イギリス</th>
+<th class="table-header header-de w-1/6">ドイツ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="table-cell text-left font-semibold bg-gray-100">牛乳（1L）</td>
+<td class="table-cell">2.0AUD</td>
+<td class="table-cell">3.0CAD</td>
+<td class="table-cell">2.5NZD</td>
+<td class="table-cell">1.2£</td>
+<td class="table-cell">1.0€</td>
+</tr>
+<tr>
+<td class="table-cell text-left font-semibold bg-gray-100">食パン（1斤）</td>
+<td class="table-cell">2.5AUD</td>
+<td class="table-cell">3.0CAD</td>
+<td class="table-cell">2.5NZD</td>
+<td class="table-cell">1.1£</td>
+<td class="table-cell">1.2€</td>
+</tr>
+<tr>
+<td class="table-cell text-left font-semibold bg-gray-100">コーヒー（カフェ）</td>
+<td class="table-cell">4.5AUD</td>
+<td class="table-cell">4.0CAD</td>
+<td class="table-cell">5.0NZD</td>
+<td class="table-cell">3.5£</td>
+<td class="table-cell">3.0€</td>
+</tr>
+<tr>
+<td class="table-cell text-left font-semibold bg-gray-100">ランチ（平均）</td>
+<td class="table-cell">18AUD</td>
+<td class="table-cell">15CAD</td>
+<td class="table-cell">18NZD</td>
+<td class="table-cell">12£</td>
+<td class="table-cell">12€</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Transportation and Communication -->
+<div class="grid grid-cols-2 gap-6 opacity-0 fade-in delay-3">
+<div>
+<h2 class="text-xl font-bold mb-3 text-gray-700">交通費の比較</h2>
+<ul class="space-y-2 text-sm">
+<li class="flex items-start">
+<span class="inline-block country-au mr-2"><i class="fas fa-subway"></i></span>
+<div>
+<span class="font-semibold country-au">オーストラリア：</span>
+                                Opalカード等（約3～6AUD/回）、距離制。都市間は飛行機が主流。
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-ca mr-2"><i class="fas fa-subway"></i></span>
+<div>
+<span class="font-semibold country-ca">カナダ：</span>
+                                各都市独自ICカード、月定期約100CAD。公共交通が発達。
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-nz mr-2"><i class="fas fa-subway"></i></span>
+<div>
+<span class="font-semibold country-nz">ニュージーランド：</span>
+                                AT HOPカード等（約2.5NZD～）。地方では車が必須。
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-uk mr-2"><i class="fas fa-subway"></i></span>
+<div>
+<span class="font-semibold country-uk">イギリス：</span>
+                                Oysterカード等、ロンドン約2.8£～。鉄道網が発達。
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-de mr-2"><i class="fas fa-subway"></i></span>
+<div>
+<span class="font-semibold country-de">ドイツ：</span>
+                                月定期約70-90€。公共交通が充実し、国内移動は電車。
+                            </div>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="text-xl font-bold mb-3 text-gray-700">携帯電話・通信費</h2>
+<ul class="space-y-2 text-sm">
+<li class="flex items-start">
+<span class="inline-block country-au mr-2"><i class="fas fa-mobile-alt"></i></span>
+<div>
+<span class="font-semibold country-au">オーストラリア：</span>
+                                約30AUD/月（15GB）、Telstra、Optus、Vodafone等
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-ca mr-2"><i class="fas fa-mobile-alt"></i></span>
+<div>
+<span class="font-semibold country-ca">カナダ：</span>
+                                約40-50CAD/月（4-8GB）、Rogers、Bell、Telus等
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-nz mr-2"><i class="fas fa-mobile-alt"></i></span>
+<div>
+<span class="font-semibold country-nz">ニュージーランド：</span>
+                                約40NZD/月（10GB）、Spark、Vodafone、2degrees等
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-uk mr-2"><i class="fas fa-mobile-alt"></i></span>
+<div>
+<span class="font-semibold country-uk">イギリス：</span>
+                                約15£/月（10GB）、EE、O2、Three、Vodafone等
+                            </div>
+</li>
+<li class="flex items-start">
+<span class="inline-block country-de mr-2"><i class="fas fa-mobile-alt"></i></span>
+<div>
+<span class="font-semibold country-de">ドイツ：</span>
+                                約15€/月（10GB）、Telekom、Vodafone、o2等
+                            </div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Living tips -->
+<div class="mt-4 opacity-0 fade-in delay-4">
+<h3 class="text-lg font-bold mb-2 text-gray-700">生活環境のポイント</h3>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+<li>ロンドンとシドニーは<span class="font-semibold">世界的に家賃が高い</span>都市</li>
+<li>ニュージーランドは<span class="font-semibold">断熱性能の低い住宅</span>が多く冬は寒い</li>
+<li>オーストラリアは<span class="font-semibold">日差しが強く</span>紫外線対策が必要</li>
+</ul>
+</div>
+<div>
+<ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+<li>イギリスとドイツは<span class="font-semibold">通信費が比較的安価</span></li>
+<li>カナダは<span class="font-semibold">公共交通機関が発達</span>しているが、冬は厳しい寒さ</li>
+<li>全体的に<span class="font-semibold">日本食材は現地よりも高め</span>（約2-3倍）</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom color bar -->
+<div class="flag-bar">
+<div class="bg-au flex-1"></div>
+<div class="bg-ca flex-1"></div>
+<div class="bg-nz flex-1"></div>
+<div class="bg-uk flex-1"></div>
+<div class="bg-de flex-1"></div>
+</div>
+</div>
+<div class="flex justify-between mt-10 text-center text-blue-600 font-semibold">
+<a href="index.html">🏠 ホーム</a>
+<a href="work-conditions.html">◀ 前へ</a>
+<a href="language-culture.html">▶ 次へ</a>
+</div>
+</body>
+</html>
