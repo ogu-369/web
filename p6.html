@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各国の言語と文化 - 人気ワーキングホリデー5カ国比較</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .country-au { color: #3498db; }
+        .country-ca { color: #e74c3c; }
+        .country-nz { color: #2ecc71; }
+        .country-uk { color: #9b59b6; }
+        .country-de { color: #f1c40f; }
+        .bg-au { background-color: #3498db; }
+        .bg-ca { background-color: #e74c3c; }
+        .bg-nz { background-color: #2ecc71; }
+        .bg-uk { background-color: #9b59b6; }
+        .bg-de { background-color: #f1c40f; }
+        .bg-au-light { background-color: rgba(52, 152, 219, 0.1); }
+        .bg-ca-light { background-color: rgba(231, 76, 60, 0.1); }
+        .bg-nz-light { background-color: rgba(46, 204, 113, 0.1); }
+        .bg-uk-light { background-color: rgba(155, 89, 182, 0.1); }
+        .bg-de-light { background-color: rgba(241, 196, 15, 0.1); }
+        .flag-bar {
+            height: 12px;
+            width: 100%;
+            display: flex;
+        }
+        .header-au { background-color: rgba(52, 152, 219, 0.2); }
+        .header-ca { background-color: rgba(231, 76, 60, 0.2); }
+        .header-nz { background-color: rgba(46, 204, 113, 0.2); }
+        .header-uk { background-color: rgba(155, 89, 182, 0.2); }
+        .header-de { background-color: rgba(241, 196, 15, 0.2); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="slide-container bg-white shadow-xl flex flex-col">
+        <!-- Top color bar representing the 5 countries -->
+        <div class="flag-bar">
+            <div class="bg-au flex-1"></div>
+            <div class="bg-ca flex-1"></div>
+            <div class="bg-nz flex-1"></div>
+            <div class="bg-uk flex-1"></div>
+            <div class="bg-de flex-1"></div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-1 flex flex-col p-10">
+            <h1 class="text-3xl font-bold mb-6 text-center text-gray-800 opacity-0 fade-in">
+                各国の言語と文化
+            </h1>
+            
+            <!-- Language environment comparison -->
+            <div class="mb-6 opacity-0 fade-in delay-1">
+                <h2 class="text-xl font-bold mb-3 text-gray-700">語学環境と必要語学レベル</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    <!-- Australia -->
+                    <div class="card bg-au-light p-3">
+                        <h3 class="font-bold country-au text-center mb-2">オーストラリア</h3>
+                        <div class="text-sm">
+                            <p><i class="fas fa-language mr-1"></i> <span class="font-semibold">言語環境:</span> 英語</p>
+                            <p class="text-xs mb-1">訛りやスラングが特徴的</p>
+                            <p><i class="fas fa-level-up-alt mr-1"></i> <span class="font-semibold">必要レベル:</span> 初級～中級</p>
+                            <p class="text-xs mb-1">接客業は中級以上推奨</p>
+                            <p><i class="fas fa-school mr-1"></i> <span class="font-semibold">語学学校:</span> 週250-350AUD</p>
+                            <p class="text-xs">最長4ヶ月まで就学可能</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Canada -->
+                    <div class="card bg-ca-light p-3">
+                        <h3 class="font-bold country-ca text-center mb-2">カナダ</h3>
+                        <div class="text-sm">
+                            <p><i class="fas fa-language mr-1"></i> <span class="font-semibold">言語環境:</span> 英語</p>
+                            <p class="text-xs mb-1">ケベック州はフランス語が主流</p>
+                            <p><i class="fas fa-level-up-alt mr-1"></i> <span class="font-semibold">必要レベル:</span> 初級～中級</p>
+                            <p class="text-xs mb-1">比較的聞き取りやすい英語</p>
+                            <p><i class="fas fa-school mr-1"></i> <span class="font-semibold">語学学校:</span> 月1,000CAD前後</p>
+                            <p class="text-xs">最長6ヶ月まで就学可能</p>
+                        </div>
+                    </div>
+                    
+                    <!-- New Zealand -->
+                    <div class="card bg-nz-light p-3">
+                        <h3 class="font-bold country-nz text-center mb-2">ニュージーランド</h3>
+                        <div class="text-sm">
+                            <p><i class="fas fa-language mr-1"></i> <span class="font-semibold">言語環境:</span> 英語</p>
+                            <p class="text-xs mb-1">独特のアクセントがある</p>
+                            <p><i class="fas fa-level-up-alt mr-1"></i> <span class="font-semibold">必要レベル:</span> 初級～中級</p>
+                            <p class="text-xs mb-1">田舎では初級でも仕事可能</p>
+                            <p><i class="fas fa-school mr-1"></i> <span class="font-semibold">語学学校:</span> 週250NZD前後</p>
+                            <p class="text-xs">最長6ヶ月まで就学可能</p>
+                        </div>
+                    </div>
+                    
+                    <!-- UK -->
+                    <div class="card bg-uk-light p-3">
+                        <h3 class="font-bold country-uk text-center mb-2">イギリス</h3>
+                        <div class="text-sm">
+                            <p><i class="fas fa-language mr-1"></i> <span class="font-semibold">言語環境:</span> 英語</p>
+                            <p class="text-xs mb-1">地域によって訛りが強い</p>
+                            <p><i class="fas fa-level-up-alt mr-1"></i> <span class="font-semibold">必要レベル:</span> 中級以上</p>
+                            <p class="text-xs mb-1">ビジネス環境では高い英語力</p>
+                            <p><i class="fas fa-school mr-1"></i> <span class="font-semibold">語学学校:</span> 週200-300£</p>
+                            <p class="text-xs">就学制限なし</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Germany -->
+                    <div class="card bg-de-light p-3">
+                        <h3 class="font-bold country-de text-center mb-2">ドイツ</h3>
+                        <div class="text-sm">
+                            <p><i class="fas fa-language mr-1"></i> <span class="font-semibold">言語環境:</span> ドイツ語</p>
+                            <p class="text-xs mb-1">英語も広く使用される</p>
+                            <p><i class="fas fa-level-up-alt mr-1"></i> <span class="font-semibold">必要レベル:</span> ドイツ語初級</p>
+                            <p class="text-xs mb-1">または英語中級以上</p>
+                            <p><i class="fas fa-school mr-1"></i> <span class="font-semibold">語学学校:</span> 週150-200€</p>
+                            <p class="text-xs">就学制限なし</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cultural characteristics and manners -->
+            <div class="mb-6 opacity-0 fade-in delay-2">
+                <h2 class="text-xl font-bold mb-3 text-gray-700">各国の文化的特徴とマナー</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    <!-- Australia -->
+                    <div class="bg-au-light p-3 rounded-lg">
+                        <h3 class="text-center font-bold country-au mb-2">オーストラリア</h3>
+                        <ul class="text-xs space-y-1">
+                            <li><i class="fas fa-check mr-1"></i> カジュアルでフレンドリー</li>
+                            <li><i class="fas fa-check mr-1"></i> 多文化社会で寛容</li>
+                            <li><i class="fas fa-check mr-1"></i> 「Please」「Thank you」の励行</li>
+                            <li><i class="fas fa-check mr-1"></i> チップ文化は基本なし</li>
+                            <li><i class="fas fa-check mr-1"></i> ジョークや冗談が好き</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Canada -->
+                    <div class="bg-ca-light p-3 rounded-lg">
+                        <h3 class="text-center font-bold country-ca mb-2">カナダ</h3>
+                        <ul class="text-xs space-y-1">
+                            <li><i class="fas fa-check mr-1"></i> 礼儀正しく穏やか</li>
+                            <li><i class="fas fa-check mr-1"></i> 謝罪・感謝の言葉を頻繁に</li>
+                            <li><i class="fas fa-check mr-1"></i> レストランでチップ15-20%</li>
+                            <li><i class="fas fa-check mr-1"></i> 環境意識が高い</li>
+                            <li><i class="fas fa-check mr-1"></i> 行列ではきちんと並ぶ</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- New Zealand -->
+                    <div class="bg-nz-light p-3 rounded-lg">
+                        <h3 class="text-center font-bold country-nz mb-2">ニュージーランド</h3>
+                        <ul class="text-xs space-y-1">
+                            <li><i class="fas fa-check mr-1"></i> おおらかで親切</li>
+                            <li><i class="fas fa-check mr-1"></i> マオリ文化を尊重</li>
+                            <li><i class="fas fa-check mr-1"></i> 自分の意見をはっきり言う</li>
+                            <li><i class="fas fa-check mr-1"></i> チップ文化は基本なし</li>
+                            <li><i class="fas fa-check mr-1"></i> エコ意識・ゴミ分別</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- UK -->
+                    <div class="bg-uk-light p-3 rounded-lg">
+                        <h3 class="text-center font-bold country-uk mb-2">イギリス</h3>
+                        <ul class="text-xs space-y-1">
+                            <li><i class="fas fa-check mr-1"></i> 礼儀と伝統を重視</li>
+                            <li><i class="fas fa-check mr-1"></i> 皮肉やユーモアが社交の基本</li>
+                            <li><i class="fas fa-check mr-1"></i> レストランでチップ10-15%</li>
+                            <li><i class="fas fa-check mr-1"></i> 行列文化が根付いている</li>
+                            <li><i class="fas fa-check mr-1"></i> 謙虚さが美徳とされる</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Germany -->
+                    <div class="bg-de-light p-3 rounded-lg">
+                        <h3 class="text-center font-bold country-de mb-2">ドイツ</h3>
+                        <ul class="text-xs space-y-1">
+                            <li><i class="fas fa-check mr-1"></i> 規律正しく時間厳守</li>
+                            <li><i class="fas fa-check mr-1"></i> 直接的なコミュニケーション</li>
+                            <li><i class="fas fa-check mr-1"></i> レストランでチップ5-10%</li>
+                            <li><i class="fas fa-check mr-1"></i> ゴミ分別の徹底</li>
+                            <li><i class="fas fa-check mr-1"></i> 日曜は多くの店が休業</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Japanese community support -->
+            <div class="mb-4 opacity-0 fade-in delay-3">
+                <h2 class="text-xl font-bold mb-3 text-gray-700">日本人コミュニティとサポート</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    <!-- Australia -->
+                    <div class="p-3 bg-white border border-blue-200 rounded-lg">
+                        <h3 class="text-center font-bold country-au mb-2 text-sm">オーストラリア</h3>
+                        <p class="text-xs">日本人会、日本語フリーペーパー、在留邦人サポート機関が充実。シドニーやメルボルンには日本人街も。日系企業も多く就労機会あり。</p>
+                    </div>
+                    
+                    <!-- Canada -->
+                    <div class="p-3 bg-white border border-red-200 rounded-lg">
+                        <h3 class="text-center font-bold country-ca mb-2 text-sm">カナダ</h3>
+                        <p class="text-xs">バンクーバー・トロントは約7万人の在留邦人。JSS（日本語社会サービス）などの支援団体。日系企業の進出も多い。</p>
+                    </div>
+                    
+                    <!-- New Zealand -->
+                    <div class="p-3 bg-white border border-green-200 rounded-lg">
+                        <h3 class="text-center font-bold country-nz mb-2 text-sm">ニュージーランド</h3>
+                        <p class="text-xs">約2万人の在留邦人。オークランド日本人会、SNSコミュニティが活発。日本語対応クリニックも一部あり。</p>
+                    </div>
+                    
+                    <!-- UK -->
+                    <div class="p-3 bg-white border border-purple-200 rounded-lg">
+                        <h3 class="text-center font-bold country-uk mb-2 text-sm">イギリス</h3>
+                        <p class="text-xs">ロンドンには日本人街や日系スーパー、学校もあり。在英日本商工会議所の活動も盛ん。日系企業も多数。</p>
+                    </div>
+                    
+                    <!-- Germany -->
+                    <div class="p-3 bg-white border border-yellow-200 rounded-lg">
+                        <h3 class="text-center font-bold country-de mb-2 text-sm">ドイツ</h3>
+                        <p class="text-xs">デュッセルドルフに日本人街。ベルリン、フランクフルトなど大都市にコミュニティあり。日独協会の活動も盛ん。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tips for language learning -->
+            <div class="mt-4 opacity-0 fade-in delay-4">
+                <h3 class="text-lg font-bold mb-2 text-gray-700">語学上達のポイント</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+                            <li>最初の数ヶ月は<span class="font-semibold">語学学校</span>に通い基礎を固める</li>
+                            <li>積極的に<span class="font-semibold">現地の人と交流</span>する機会を作る</li>
+                            <li>Language Exchange（言語交換）で<span class="font-semibold">相互学習</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-disc pl-6 text-gray-600 space-y-1 text-sm">
+                            <li>図書館・教会などの<span class="font-semibold">無料英会話クラス</span>を活用</li>
+                            <li>日本人コミュニティに頼りすぎず<span class="font-semibold">バランス</span>を取る</li>
+                            <li>現地の<span class="font-semibold">ボランティア活動</span>に参加して実践練習</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom color bar -->
+        <div class="flag-bar">
+            <div class="bg-au flex-1"></div>
+            <div class="bg-ca flex-1"></div>
+            <div class="bg-nz flex-1"></div>
+            <div class="bg-uk flex-1"></div>
+            <div class="bg-de flex-1"></div>
+        </div>
+    </div>
+</body>
+</html>
+
